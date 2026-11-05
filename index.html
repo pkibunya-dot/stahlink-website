@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stahlink Systems | High-Performance Tech Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#05070a',
+                            surface: '#0B0F17',
+                            card: '#121824',
+                            border: '#1F293D',
+                            accent: '#00F0FF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #05070a; color: #E2E8F0; font-family: system-ui, -apple-system, sans-serif; }
+        .glass-panel {
+            background: rgba(18, 24, 36, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(18, 24, 36, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+        .slide-bg {
+            transition: opacity 1.2s ease-in-out, transform 8s ease-out;
+        }
+    </style>
+</head>
+<body class="grid-pattern antialiased min-h-screen selection:bg-cyan-500 selection:text-black">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254700000000?text=Hello%20Stahlink%20Systems,%20I%20would%20like%20to%20inquire%20about%20your%20systems." 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all hover:scale-105 group"
+       title="Chat on WhatsApp">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- Header Navigation with Round Logo Frame -->
+    <header class="sticky top-0 z-45 glass-panel border-b border-brand-border/40">
+        <div class="max-w-[95%] mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Circular Logo Container -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_15px_rgba(0,240,255,0.3)] bg-brand-surface flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+                    <img src="images/logo.png.png" alt="Stalink Networks Logo" class="w-full h-full object-cover scale-125">
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <a href="#systems" class="hover:text-cyan-400 transition-colors">Systems</a>
+                <a href="#clients" class="hover:text-cyan-400 transition-colors">Clients</a>
+                <a href="#specs" class="hover:text-cyan-400 transition-colors">Specs</a>
+            </nav>
+            <a href="https://wa.me/254790103327" target="_blank" class="px-5 py-2.5 rounded-full text-xs font-mono font-semibold text-black bg-cyan-400 hover:bg-cyan-300 transition-all shadow-[0_0_15px_rgba(0,240,255,0.4)]">GET IN TOUCH</a>
+        </div>
+    </header>
+
+    <!-- Dynamic Hero Carousel Section -->
+    <section class="relative pt-28 pb-24 px-6 max-w-[95%] mx-auto text-center overflow-hidden rounded-3xl mt-4 border border-brand-border/60">
+        
+        <!-- Background Image Slideshow Container -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/Security%20&%20Encryption%20UI.jpg" alt="Security System" class="slide-bg absolute inset-0 w-full h-full object-cover opacity-30 scale-100">
+            <img src="images/Code%20Reflection%20on%20Glasses.jpg" alt="Software Architecture" class="slide-bg absolute inset-0 w-full h-full object-cover opacity-0 scale-105">
+            <img src="images/Tech%20Operations%20at%20Night.jpg" alt="System Operations" class="slide-bg absolute inset-0 w-full h-full object-cover opacity-0 scale-105">
+            
+            <!-- Dark Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-black/90 via-brand-black/70 to-brand-black"></div>
+        </div>
+
+        <!-- Foreground Content -->
+        <div class="relative z-10">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel text-xs font-mono text-cyan-400 mb-8 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,240,255,0.15)]">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span>NEXT-GEN ENTERPRISE HARDWARE & TELEMETRY</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6 drop-shadow-md">
+                INTELLIGENT INFRASTRUCTURE FOR MODERN OPERATIONS.
+            </h1>
+            <p class="text-gray-300 max-w-2xl mx-auto text-base md:text-lg mb-10 font-normal leading-relaxed">
+                High-precision POS environments, biometric attendance arrays, campus transit tracking, school management, payroll, and industrial automation systems.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#systems" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-mono text-xs font-bold text-black bg-cyan-400 hover:bg-cyan-300 transition-all shadow-[0_0_25px_rgba(0,240,255,0.4)]">EXPLORE SYSTEMS</a>
+                <a href="https://wa.me/254790103327" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-mono text-xs font-semibold text-white glass-card hover:border-cyan-400/50 transition-all">WHATSAPP INQUIRY</a>
+            </div>
+
+            <!-- Slideshow Dots Indicator -->
+            <div class="flex items-center justify-center space-x-2 mt-12">
+                <span class="dot w-6 h-2.5 rounded-full bg-cyan-400 transition-all duration-300"></span>
+                <span class="dot w-2.5 h-2.5 rounded-full bg-gray-600 transition-all duration-300"></span>
+                <span class="dot w-2.5 h-2.5 rounded-full bg-gray-600 transition-all duration-300"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Grid -->
+    <section id="systems" class="max-w-[95%] mx-auto px-6 py-16">
+        <div class="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-3">PRODUCT SHOWCASE</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">Hardware & Software Solutions</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- POS Card -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-64 w-full overflow-hidden border-b border-brand-border/40">
+                    <img src="images/Supermarket%20POS%20Hardware.jpg" alt="Supermarket POS Hardware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">POS & Supermarket Systems</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Integrated point-of-sale hardware terminals, thermal receipt printers, barcode scanners, cash drawers, and real-time inventory management.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/40 font-mono text-xs text-cyan-400">Retail & Wholesale</div>
+                </div>
+            </div>
+
+            <!-- Attendance Card -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-64 w-full overflow-hidden border-b border-brand-border/40">
+                    <img src="images/Biometric%20Access%20%20Attendance.jpg" alt="Biometric Access Attendance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Biometric Attendance & Access</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Wall-mounted touch screen biometrics, RFID card validation, real-time clock-in tracking, and shift management integration.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/40 font-mono text-xs text-cyan-400">Workforce & Access Control</div>
+                </div>
+            </div>
+
+            <!-- School Management Card -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-64 w-full overflow-hidden border-b border-brand-border/40">
+                    <img src="images/School%20Management%20System.jpg" alt="School Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">School Management Systems</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Complete academic management platforms covering student portals, fee tracking, report cards, class scheduling, and administrative dashboards.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/40 font-mono text-xs text-cyan-400">Education & Academics</div>
+                </div>
+            </div>
+
+            <!-- Campus Transit Card -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-64 w-full overflow-hidden border-b border-brand-border/40 bg-slate-900/60 flex items-center justify-center">
+                    <img src="images/Campus%20Transit%20%20Bus%20Tracker.png" alt="Campus Transit Bus Tracker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Campus Transit & Tracking</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Automated transit management and fleet tracking solutions for school buses, institutional transit routes, and real-time parent/operator notifications.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/40 font-mono text-xs text-cyan-400">Fleet & School Logistics</div>
+                </div>
+            </div>
+
+            <!-- Payroll Card -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-64 w-full overflow-hidden border-b border-brand-border/40">
+                    <img src="images/Payroll%20&%20Calendar%20Management.jpg" alt="Payroll & Calendar Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Payroll & Automated Calendars</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Automated salary calculations, direct deposit planning, calendar shift schedules, tax deductions, and instant employee pay slip generation.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/40 font-mono text-xs text-cyan-400">Financial & HR Operations</div>
+                </div>
+            </div>
+
+            <!-- Industrial & Smart Automation Card -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-64 w-full overflow-hidden border-b border-brand-border/40">
+                    <img src="images/Best-Automation-Tools.jpg" alt="Smart Automation Tools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Smart Industrial Automation</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Custom embedded relay logic, sensor arrays, automated hardware switches, telemetry monitoring, and smart facility controllers.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/40 font-mono text-xs text-cyan-400">Industrial & Embedded Logic</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section id="clients" class="max-w-[95%] mx-auto px-6 py-12">
+        <div class="glass-panel p-8 md:p-12 rounded-2xl border border-brand-border text-center">
+            <div class="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-3">TRUSTED PARTNERS</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-8">Deployed Across Enterprises & Institutions</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-xl flex items-center justify-center">
+                    <span class="font-mono text-sm text-gray-300 font-semibold tracking-wider">SUPERMARKETS</span>
+                </div>
+                <div class="glass-card p-6 rounded-xl flex items-center justify-center">
+                    <span class="font-mono text-sm text-gray-300 font-semibold tracking-wider">SCHOOLS & ACADEMIES</span>
+                </div>
+                <div class="glass-card p-6 rounded-xl flex items-center justify-center">
+                    <span class="font-mono text-sm text-gray-300 font-semibold tracking-wider">CORPORATE OFFICES</span>
+                </div>
+                <div class="glass-card p-6 rounded-xl flex items-center justify-center">
+                    <span class="font-mono text-sm text-gray-300 font-semibold tracking-wider">TRANSIT FLEETS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Table -->
+    <section id="specs" class="max-w-[95%] mx-auto px-6 py-12 mb-12">
+        <div class="glass-panel p-8 rounded-2xl border border-brand-border">
+            <div class="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-2">SPECIFICATIONS</div>
+            <h3 class="text-2xl font-bold text-white mb-6">System Architecture Specs</h3>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-gray-400">
+                    <thead class="text-xs uppercase font-mono bg-brand-surface/80 text-gray-300 border-b border-brand-border">
+                        <tr>
+                            <th class="py-4 px-4">System Tier</th>
+                            <th class="py-4 px-4">Core Connectivity</th>
+                            <th class="py-4 px-4">Data Latency</th>
+                            <th class="py-4 px-4">Backup Protocol</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-brand-border/40 font-mono text-xs">
+                        <tr>
+                            <td class="py-4 px-4 text-white font-semibold">POS Systems</td>
+                            <td class="py-4 px-4">Ethernet / Wi-Fi / USB</td>
+                            <td class="py-4 px-4 text-cyan-400">&lt; 50ms</td>
+                            <td class="py-4 px-4">Local SQLite + Cloud Sync</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 text-white font-semibold">Biometric Attendance</td>
+                            <td class="py-4 px-4">TCP/IP / RS485 / Wiegand</td>
+                            <td class="py-4 px-4 text-cyan-400">&lt; 100ms</td>
+                            <td class="py-4 px-4">On-device Flash Cache</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 text-white font-semibold">School & Transit Systems</td>
+                            <td class="py-4 px-4">Cloud API / GPS / NFC</td>
+                            <td class="py-4 px-4 text-cyan-400">Real-time</td>
+                            <td class="py-4 px-4">Encrypted Cloud Database</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 text-white font-semibold">Payroll & Automation</td>
+                            <td class="py-4 px-4">Relay IO / MQTT / Modbus</td>
+                            <td class="py-4 px-4 text-cyan-400">&lt; 10ms</td>
+                            <td class="py-4 px-4">Hardware Watchdog Timer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-brand-border/40 py-10 text-center text-xs text-gray-500 font-mono">
+        <p>&copy; 2026 STAHLINK SYSTEMS. ALL RIGHTS RESERVED. (STAHLINKSYSTEMS.CO.KE)</p>
+    </footer>
+
+    <!-- Background Carousel Script -->
+    <script>
+        const slides = document.querySelectorAll('.slide-bg');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.opacity = '2.35';
+                    slide.style.transform = 'scale(1)';
+                } else {
+                    slide.style.opacity = '0';
+                    slide.style.transform = 'scale(1.05)';
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-gray-600', 'w-2.5');
+                    dot.classList.add('bg-cyan-400', 'w-6');
+                } else {
+                    dot.classList.remove('bg-cyan-400', 'w-6');
+                    dot.classList.add('bg-gray-600', 'w-2.5');
+                }
+            });
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+    </script>
+</body>
+</html>
